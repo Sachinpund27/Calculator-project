@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Addition</title>
+</head>
+<body>
+  <h2>Simple Addition</h2>
+
+  <input type="number" id="num1" placeholder="Enter first number">
+  +
+  <input type="number" id="num2" placeholder="Enter second number">
+  <button onclick="addNumbers()">Add</button>
+  <button onclick="mulNumbers()">multiplication</button>
+
+
+  <h3>Result: <span id="result">0</span></h3>
+
+  <!-- Link to JS file -->
+  <!-- <script src="script.js"></script> -->
+
+<script>
+function addNumbers() {
+    const number1 = parseFloat(document.getElementById('num1').value);
+    const number2 = parseFloat(document.getElementById('num2').value);
+    const sum = number1 + number2;
+  
+    document.getElementById('result').textContent = sum;
+  }
+
+  function mulNumbers() {
+    const number1 = parseFloat(document.getElementById('num1').value);
+    const number2 = parseFloat(document.getElementById('num2').value);
+    const mul = number1 * number2;
+  
+    document.getElementById('result').textContent = mul;
+  }
+
+</script>
+</body>
+</html> 
