@@ -4,23 +4,26 @@
   <meta charset="UTF-8">
   <title>Simple Addition</title>
 </head>
-<body>
-  <h2>Simple Addition And Multiplication</h2>
-
+<body style="background-color:pink;">
+  <h2 style="text-align: center;"> Simple Calculator</h2>
+  <p  style="text-align: center;"> 
   <input type="number" id="num1" placeholder="Enter first number">
-  +
+  <br>  <br>
   <input type="number" id="num2" placeholder="Enter second number">
-  <button onclick="addNumbers()">Add</button>
-  <button onclick="mulNumbers()">multiplication</button>
+  <br>
+  <br>
+  <button style="background-color: blue; color: white;" onclick=addNumbers()>Add</button>
+  <button style="background-color: blue; color: white;" onclick="mulNumbers()">Multiplication</button>
+  <button style="background-color: blue; color: white;" onclick="subNumbers()">Subtraction</button>
+  <button style="background-color: blue; color: white;" onclick="divNumbers()">division</button>
+  </p>
 
-
-  <h3>Result: <span id="result">0</span></h3>
+  <h3  style="text-align: center;"> Result: <span style="color: red;" id="result"> 0 </span></h3>
 
   <!-- Link to JS file -->
   <!-- <script src="script.js"></script> -->
-
 <script>
-function addNumbers() {
+function addNumbers() { 
     const number1 = parseFloat(document.getElementById('num1').value);
     const number2 = parseFloat(document.getElementById('num2').value);
     const sum = number1 + number2;
@@ -35,7 +38,20 @@ function addNumbers() {
   
     document.getElementById('result').textContent = mul;
   }
-
+  function subNumbers() {
+    const number1 = parseFloat(document.getElementById('num1').value);
+    const number2 = parseFloat(document.getElementById('num2').value);
+    const sub = number1 - number2;
+  
+    document.getElementById('result').textContent = sub;
+  
+  }function divNumbers() {
+    const number1 = parseFloat(document.getElementById('num1').value);
+    const number2 = parseFloat(document.getElementById('num2').value);
+    const div = number1 / number2;
+  
+    document.getElementById('result').textContent = div;
+  }
 </script>
 </body>
 </html> 
